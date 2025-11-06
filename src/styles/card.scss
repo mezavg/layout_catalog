@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .card {
   width: 200px;
   padding: 16px;
@@ -9,7 +11,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
   }
   &__title {
@@ -18,23 +20,24 @@
   }
 
   &:hover &__title {
-    color: #00ACDC;
+    color: $blue;
   }
 
   &__button {
-    background-color: #00ACDC;
+    background-color: $blue;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
     padding: 10px 0;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     margin-top: 10px;
     display: block;
 
     &:hover {
-      background-color: #0090BE;
+      background-color: color.adjust($blue, $lightness: -10%);
+      color: #fff;
     }
   }
 }
