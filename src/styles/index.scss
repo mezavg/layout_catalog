@@ -9,12 +9,21 @@ body {
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 32px;
+  gap: $gap;
+  padding: 32px;
   justify-content: center;
-  padding: 40px 0;
-  background-color: #f8f8f8;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+
+  grid-template-columns: repeat(1, $card-width);
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $card-width);
+  }
 }

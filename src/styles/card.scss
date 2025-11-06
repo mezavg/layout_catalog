@@ -1,69 +1,40 @@
 .card {
-  width: 260px;
+  width: 200px;
   padding: 16px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  font-family: Roboto, sans-serif;
   background-color: #fff;
-  margin: 0;
-}
-
-.card__image {
-  width: 100%;
-  border-radius: 4px;
-  margin-bottom: 12px;
-}
-
-.card__title {
-  font-size: 14px;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #000;
-  margin-bottom: 6px;
-}
-
-.card__product-code {
-  font-size: 12px;
-  line-height: 1.4;
-  color: #000;
-  margin-bottom: 8px;
-  font-weight: 500;
-}
-
-.card__price {
-  margin: 10px 0;
-  font-size: 15px;
-  color: #333;
-}
-
-.card__price-label {
-  font-weight: 700;
-  color: #000;
-  font-size: 18px;
-
-}
-
-.card__price-value {
-  font-weight: 700;
-  color: black;
-  font-size: 20px;
-}
-
-.card__button {
-  display: block;
-  background-color: #00ACDC;
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 10px 0;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
-    background-color: #0090BE;
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  &__title {
+    color: #000;
+    transition: color 0.3s ease;
+  }
+
+  &:hover &__title {
+    color: #00ACDC;
+  }
+
+  &__button {
+    background-color: #00ACDC;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: block;
+
+    &:hover {
+      background-color: #0090BE;
+    }
   }
 }
